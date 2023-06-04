@@ -8,7 +8,8 @@ function CreateArea(props) {
     content: ""
   });
   const [zoomedIn, setZoomIn] = useState(false);
-
+  
+  const {title,content} = note;
   function handleChange(event) {
     const { name, value } = event.target;
 
@@ -21,12 +22,16 @@ function CreateArea(props) {
   }
 
   function submitNote(event) {
+    event.preventDefault();
+    if(title === "" && content === "") {
+      return;
+    }
     props.onAdd(note);
     setNote({
       title: "",
       content: ""
     });
-    event.preventDefault();
+    
   }
 
   function expand() {
