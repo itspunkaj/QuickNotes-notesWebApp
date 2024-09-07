@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  /* overflow: hidden; */
 }
 html {
   font-family: "Montserrat", sans-serif;
@@ -9,8 +10,7 @@ html {
 body {
   background: #eee;
   background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
-
-  padding: 0 16px;
+  overflow: hidden;
 }
 
 header {

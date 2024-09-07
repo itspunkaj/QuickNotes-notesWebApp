@@ -47,6 +47,7 @@ function CreateArea(props) {
             onChange={handleChange}
             value={note.title}
             placeholder="Title"
+            style={{fontSize : '18px'}}
           />
         )}
         <textarea
@@ -56,6 +57,7 @@ function CreateArea(props) {
           value={note.content}
           placeholder="Take a note..."
           rows={zoomedIn ? 3 : 1}
+          style={{ fontSize : '16px'}}
         />
         <Zoom in={zoomedIn}>
           <Fab onClick={submitNote}>
